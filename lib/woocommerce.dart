@@ -558,7 +558,7 @@ class WooCommerce {
 
     _printToLog("Parameters: " + payload.toString());
     List<WooProduct> products = [];
-    _setApiResourceUrl(path: 'products?category=$id', queryParameters: payload);
+    _setApiResourceUrl(path: 'products?category='+id.toString(), queryParameters: payload);
     final response = await get(queryUri.toString());
     _printToLog('response gotten : ' + response.toString());
     _printToLog('this is the queri uri : ' + queryUri.toString());
