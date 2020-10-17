@@ -522,7 +522,7 @@ class WooCommerce {
     bool onSale,
     @required int id,
   }) async {
-    Map<String, dynamic> payload = {};
+    Map<String, dynamic> payload = {'category' = '$id'};
 
     ({
       'page': page,
@@ -558,7 +558,7 @@ class WooCommerce {
 
     _printToLog("Parameters: " + payload.toString());
     List<WooProduct> products = [];
-    _setApiResourceUrl(path: 'products?category='+id.toString(), queryParameters: payload);
+    _setApiResourceUrl(path: 'products', queryParameters: payload);
     final response = await get(queryUri.toString());
     _printToLog('response gotten : ' + response.toString());
     _printToLog('this is the queri uri : ' + queryUri.toString());
