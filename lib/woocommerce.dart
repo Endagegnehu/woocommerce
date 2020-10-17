@@ -522,7 +522,7 @@ class WooCommerce {
     bool onSale,
     @required int id,
   }) async {
-    Map<String, dynamic> payload = {'category' = '$id'};
+    Map<String, dynamic> payload = {'category': '$id'};
 
     ({
       'page': page,
