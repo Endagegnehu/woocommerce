@@ -51,7 +51,7 @@ class WooProduct {
   final String priceHtml;
   final bool onSale;
   final bool purchasable;
-  final int totalSales;
+  final String totalSales;
   final bool virtual;
   final bool downloadable;
   final List<WooProductDownload> downloads;
